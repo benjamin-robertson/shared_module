@@ -8,4 +8,7 @@ class shared_module {
   file { '/tmp/shared.txt':
     content => 'This content is from the shared module.',
   }
+  file { '/blah.txt':
+    content => 'blah content',
+  }
 }
