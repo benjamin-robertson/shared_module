@@ -15,7 +15,7 @@ describe 'shared_module' do
           let(:facts) do
             super().merge({ 'tier' => tier })
           end
-        
+
           datacentres.each do |datacentre|
             context "with datcentre #{datacentre}" do
               let(:facts) do
@@ -23,8 +23,8 @@ describe 'shared_module' do
               end
 
               it { is_expected.to compile.with_all_deps }
-              it { is_expected.to contain_file('/tmp/shared.txt').with_content('This content is from the shared module.')}
-              it { is_expected.to contain_file('/blah.txt').with_content(%r{blah})}
+              it { is_expected.to contain_file('/tmp/shared.txt').with_content('This content is from the shared module.') }
+              it { is_expected.to contain_file('/blah.txt').with_content(%r{blah}) }
             end
           end
         end
