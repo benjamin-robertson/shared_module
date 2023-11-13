@@ -7,7 +7,7 @@ describe 'shared_module' do
     context "on #{os}" do
       let(:facts) { os_facts }
 
-      tiers = [ 'blah' ]
+      tiers = [ 'cat' ]
       datacentres = [ 'blah', 'cats', 'dogs', 'hi', 'hello', 'gday' ]
 
       tiers.each do |tier|
