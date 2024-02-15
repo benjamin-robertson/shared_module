@@ -6,6 +6,7 @@ describe 'shared_module' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
+      let(:hiera_config) { 'hiera-rspec.yaml' }
 
       tiers = [ 'dog' ]
       datacentres = [ 'blah', 'cats', 'dogs', 'hi', 'hello', 'gday' ]

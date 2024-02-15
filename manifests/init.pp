@@ -11,4 +11,6 @@ class shared_module {
   file { '/blah.txt':
     content => 'blah content',
   }
+
+  include shared_module::test
 }
